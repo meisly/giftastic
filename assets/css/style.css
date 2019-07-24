@@ -25,7 +25,12 @@ nav h1 {
     margin: 10px;
     box-shadow: 5px 10px 5px grey;
 }
-
+.btn-sm {
+    font-size: 0.7em;
+}
+#btn-title {
+    border-bottom: 1px solid grey;
+}
 .btn {
     margin: 4px;
 }

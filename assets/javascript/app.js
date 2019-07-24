@@ -30,7 +30,7 @@ function renderButtons() {
     // Looping through the array of gifs and creating buttons for each item in the array
     for (var i = 0; i < gifs.length; i++) {
 
-        var btn = $("<button class='btn btn-danger'>");
+        var btn = $("<button class='btn btn-sm btn-danger'>");
         btn.addClass("gif");
         btn.attr("data-name", gifs[i]);
         btn.text(gifs[i]);
