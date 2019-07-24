@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: pink;
+}
+nav {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+nav h1 {
+    margin-left: 8%;
+    font-family: 'Cuprum', sans-serif;
+}
+#gif-form {
+    float: right;
+}
+#gif-input, .input-label {
+    margin: 5px;
+}
+.nav-width {
+    max-width: 80%;
+}
+.video {
+    margin: 10px;
+    box-shadow: 5px 10px 5px grey;
+}
+
+.btn {
+    margin: 4px;
+}
