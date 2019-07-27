@@ -1,9 +1,10 @@
+
 var gifs = ["Brony", "Friendship is Magic", "Rainbow Dash", "Apple Jack", "Fluttershy", "Twilight Sparkle", "Rarity", "Pinky Pie", "Spike"];
 var offset = 0;
 
 function getGifs() {
 
-    var gif = $(this).attr("data-name") + " MLP pony";
+    var gif = $(this).attr("data-name") + " MLP";
     var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=GzoVeDvYCNZarmkXUSYjvQGOohzUCU2c&q=" + gif + "&limit=25&offset=" + offset + "&rating=G&lang=en";
 
     // Creates AJAX call for the specific button being clicked
@@ -16,9 +17,18 @@ function getGifs() {
 
         for (var j = 0; j < response.data.length; j++) {
             var gifURL = response.data[j].images.fixed_height_small.mp4;
+            var vidInfoBox = $("<div class='tooltips'>");
             var newGif = $("<video loop class='video'>");
             newGif.attr("src", gifURL);
-            $("#gif-box").append(newGif);
+            
+            // var gifInfoBox = $("<div class='tooltip'>");
+            var gifInfo = $("<span class='tooltiptext'>");
+            gifInfo.text(response.data[j].title + " Rated: "+ response.data[j].rating);
+            // gifInfoBox.append(gifInfo);
+           
+            vidInfoBox.append(newGif);
+            vidInfoBox.append(gifInfo);
+            $("#gif-box").append(vidInfoBox);
         }
     });
 

@@ -34,3 +34,33 @@ nav h1 {
 .btn {
     margin: 4px;
 }
+
+.tooltips {
+    position: relative;
+    display: inline-block;
+
+  }
+  
+  .tooltips .tooltiptext {
+    visibility: hidden;
+    width: 180px;
+    background-color: #e85599;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 2px;
+    font-size: .7rem;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: 88%;
+    left: 50%; 
+    margin-left: -80px;
+    box-shadow: 7px 12px 4px #827a7a6b;
+   
+  }
+  
+  .tooltips:hover .tooltiptext {
+    visibility: visible;
+  }
